@@ -7,7 +7,7 @@
   <project EXPORT="discard">[APPS_DIR]/collect-view</project>
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
-    <title>mqtt_slip</title>
+    <title>mqtt_sn_exemplo</title>
     <speedlimit>1.0</speedlimit>
     <randomseed>123456</randomseed>
     <motedelay_us>1000000</motedelay_us>
@@ -24,8 +24,8 @@
     <motetype>
       org.contikios.cooja.mspmote.Z1MoteType
       <identifier>z11</identifier>
-      <description>slip_br</description>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/ipv6/rpl-border-router/border-router.z1</firmware>
+      <description>border_router</description>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/MQTT-SN-Contiki---HomeStark/tools/border-router.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -42,8 +42,8 @@
     <motetype>
       org.contikios.cooja.mspmote.Z1MoteType
       <identifier>z12</identifier>
-      <description>mqtt_node</description>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/homestark/main_core.z1</firmware>
+      <description>node_mqtt_sn</description>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/MQTT-SN-Contiki---HomeStark/main_core.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -61,8 +61,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>72.42298006570304</x>
-        <y>-0.630233573882176</y>
+        <x>-17.47445540970304</x>
+        <y>-7.579613323161325</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -79,8 +79,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>65.53371226313176</x>
-        <y>1.606236668872345</y>
+        <x>1.602258310877847</x>
+        <y>24.66647840759198</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -96,10 +96,10 @@
   </simulation>
   <plugin>
     org.contikios.cooja.plugins.SimControl
-    <width>303</width>
-    <z>2</z>
-    <height>163</height>
-    <location_x>399</location_x>
+    <width>280</width>
+    <z>0</z>
+    <height>160</height>
+    <location_x>400</location_x>
     <location_y>0</location_y>
   </plugin>
   <plugin>
@@ -111,29 +111,27 @@
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.AddressVisualizerSkin</skin>
-      <skin>org.contikios.cooja.plugins.skins.AttributeVisualizerSkin</skin>
-      <skin>org.contikios.cooja.mspmote.plugins.CodeVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.MoteTypeVisualizerSkin</skin>
-      <viewport>24.691131309144556 0.0 0.0 24.691131309144556 -1525.145013744369 128.43388724259734</viewport>
+      <viewport>2.3463111229246643 0.0 0.0 2.3463111229246643 164.98831178608162 85.45444919824362</viewport>
     </plugin_config>
     <width>400</width>
-    <z>5</z>
-    <height>424</height>
+    <z>1</z>
+    <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.LogListener
     <plugin_config>
-      <filter>ID:2</filter>
+      <filter />
       <formatted_time />
       <coloring />
     </plugin_config>
-    <width>681</width>
-    <z>0</z>
-    <height>539</height>
-    <location_x>402</location_x>
-    <location_y>164</location_y>
+    <width>1154</width>
+    <z>3</z>
+    <height>465</height>
+    <location_x>400</location_x>
+    <location_y>160</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.TimeLine
@@ -145,11 +143,23 @@
       <showLEDs />
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
-    <width>396</width>
+    <width>1554</width>
+    <z>5</z>
+    <height>166</height>
+    <location_x>0</location_x>
+    <location_y>629</location_y>
+  </plugin>
+  <plugin>
+    org.contikios.cooja.plugins.Notes
+    <plugin_config>
+      <notes>Enter notes here</notes>
+      <decorations>true</decorations>
+    </plugin_config>
+    <width>874</width>
     <z>4</z>
-    <height>145</height>
-    <location_x>2</location_x>
-    <location_y>427</location_y>
+    <height>160</height>
+    <location_x>680</location_x>
+    <location_y>0</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.serialsocket.SerialSocketServer
@@ -159,24 +169,10 @@
       <bound>true</bound>
     </plugin_config>
     <width>362</width>
-    <z>1</z>
+    <z>2</z>
     <height>116</height>
-    <location_x>22</location_x>
-    <location_y>571</location_y>
-  </plugin>
-  <plugin>
-    org.contikios.cooja.plugins.VariableWatcher
-    <mote_arg>1</mote_arg>
-    <plugin_config>
-      <varname>mqtt_event_register</varname>
-      <vartype>0</vartype>
-      <varformat>2</varformat>
-    </plugin_config>
-    <width>380</width>
-    <z>3</z>
-    <height>162</height>
-    <location_x>703</location_x>
-    <location_y>1</location_y>
+    <location_x>29</location_x>
+    <location_y>475</location_y>
   </plugin>
 </simconf>
 

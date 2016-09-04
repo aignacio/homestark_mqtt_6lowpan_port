@@ -1,35 +1,53 @@
 /**
-  * @file mqtt_sn.c
-  * @author Ânderson Ignácio da Silva
-  * @date 19 Ago 2016
-  * @brief Arquivo principal do código fonte do porte do MQTT-SN para o Contiki
-  * @see http://www.aignacio.com
-  * @@
-  [Apontamento n-1]:
-  Descoberta uma característica do contiki, o que ocorre é que se você utiliza
-  algum  temporizador de evento (etimer) e ele expira, ele gera um evento o que
-  e esperado, porém se você tiver testando diversas condições de forma sequencial
-  1) else if(ev == etimer_expired(....))
-  2) else if(ev == mqtt_event_regack)
-  ...
-  MESMO após ter gerado o evento de "expiração", caso a condição 1) esteja antes
-  da 2), e a 2) que gerou um evento, a 1) será executada anteriormente porque
-  compreendesse que o "timer continua expirado".
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
 
-  [Apontamento n-2]:
-  Como nesta API utiliza-se malloc necessitamos da função do tipo POSIX chamadas
-  "sbrk" a qual utiliza de chamadas de sistema para realizar a operação de aloca
-  ção de memória.Logo, devemos incluir no arquivo principal o arquivo syscalls.c
-  (arquivo disponibilizado pelo contiki - lib/newlib/syscalls.c) e também  deve-
-  mos incluir as variáveis _heap e _eheap no linker script (cc26xx.ld) para a
-  função sbrk saber onde começa e termina a zona heap de memória do mcu.
+    http://www.apache.org/licenses/LICENSE-2.0
 
-  Incluir no linker:
-  ...
-    _heap = .;
-    _eheap = ORIGIN(SRAM) + LENGTH(SRAM);
-  }
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
 
+ *******************************************************************************
+ * @license Este projeto está sendo liberado pela licença APACHE 2.0.
+ * @file mqtt_sn.c
+ * @author Ânderson Ignácio da Silva
+ * @date 19 Ago 2016
+ * @brief Arquivo principal do código fonte do porte do MQTT-SN para o Contiki
+ * @see http://www.aignacio.com
+
+ [Apontamento n-1]:
+ Descoberta uma característica do contiki, o que ocorre é que se você utiliza
+ algum  temporizador de evento (etimer) e ele expira, ele gera um evento o que
+ e esperado, porém se você tiver testando diversas condições de forma sequencial
+ 1) else if(ev == etimer_expired(....))
+ 2) else if(ev == mqtt_event_regack)
+ ...
+ MESMO após ter gerado o evento de "expiração", caso a condição 1) esteja antes
+ da 2), e a 2) que gerou um evento, a 1) será executada anteriormente porque
+ compreendesse que o "timer continua expirado".
+
+ [Apontamento n-2]:
+ Como nesta API utiliza-se malloc necessitamos da função do tipo POSIX chamadas
+ "sbrk" a qual utiliza de chamadas de sistema para realizar a operação de aloca
+ ção de memória.Logo, devemos incluir no arquivo principal o arquivo syscalls.c
+ (arquivo disponibilizado pelo contiki - lib/newlib/syscalls.c) e também  deve-
+ mos incluir as variáveis _heap e _eheap no linker script (cc26xx.ld) para a
+ função sbrk saber onde começa e termina a zona heap de memória do mcu.
+
+ Incluir no linker:
+ ...
+   _heap = .;
+   _eheap = ORIGIN(SRAM) + LENGTH(SRAM);
+ }
 */
 
 #include "contiki.h"

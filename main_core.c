@@ -34,7 +34,7 @@
 #include "mqtt_sn.h"
 #include "dev/leds.h"
 #include "net/rime/rime.h"
-#include "simple-udp.h"
+#include "net/ip/uip.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -78,10 +78,10 @@ void init_broker(void){
   mqtt_sn_connection.udp_port      = udp_port;
   mqtt_sn_connection.ipv6_broker   = broker_address;
   mqtt_sn_connection.keep_alive    = keep_alive;
-  mqtt_sn_connection.will_topic    = will_topic;   // Configurar como sendo 0x00 senão quiser utilizar
-  mqtt_sn_connection.will_message  = will_message; // Configurar como sendo 0x00 senão quiser utilizar
-  // mqtt_sn_connection.will_topic    = 0x00; // Configurar como sendo 0x00 senão quiser utilizar
-  // mqtt_sn_connection.will_message  = 0x00; // Configurar como sendo 0x00 senão quiser utilizar
+  //mqtt_sn_connection.will_topic    = will_topic;   // Configurar como sendo 0x00 senão quiser utilizar
+  //mqtt_sn_connection.will_message  = will_message; // Configurar como sendo 0x00 senão quiser utilizar
+  mqtt_sn_connection.will_topic    = 0x00; // Configurar como sendo 0x00 senão quiser utilizar
+  mqtt_sn_connection.will_message  = 0x00; // Configurar como sendo 0x00 senão quiser utilizar
 
   mqtt_sn_init();   // Inicializa alocação de eventos e a principal PROCESS_THREAD do MQTT-SN
 
@@ -118,16 +118,18 @@ PROCESS_THREAD(init_system_process, ev, data)
 
   while(1) {
       PROCESS_WAIT_EVENT();
-      debug_os("Execucao[%d]",tick_process++);\
-      sprintf(pub_test,"Execucao %d",tick_process);
-      mqtt_sn_pub(topic_hw,pub_test,true,0);
-      //mqtt_sn_pub("/topic_6",pub_test,true,0);
+      // debug_os("Execucao[%d]",tick_process++);\
+      // sprintf(pub_test,"Execucao %d",tick_process);
+      sprintf(pub_test,"%s",topic_hw);
+
+      //mqtt_sn_pub(topic_hw,pub_test,true,0);
+      mqtt_sn_pub("/topic_1",pub_test,true,0);
       //mqtt_sn_pub("/topic_5",pub_test,true,0);
       //mqtt_sn_pub("/topic_4",pub_test,true,0);
 
       //mqtt_sn_check_queue();
       //print_g_topics();
-      //debug_os("Estado do MQTT:%s",mqtt_sn_check_status_string());
+      debug_os("Estado do MQTT:%s",mqtt_sn_check_status_string());
       if (etimer_expired(&time_poll))
         etimer_reset(&time_poll);
   }

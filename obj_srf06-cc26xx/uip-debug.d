@@ -4,7 +4,7 @@ obj_srf06-cc26xx/uip-debug.o: /projects/contiki/core/net/ip/uip-debug.c \
  /projects/contiki/core/./net/ip/uip.h \
  /projects/contiki/core/./net/ip/uipopt.h \
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h \
- /projects/contiki/platform/srf06-cc26xx/srf06/cc26xx/board.h \
+ /projects/contiki/platform/srf06-cc26xx/launchpad/cc2650/board.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/ioc.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_types.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_chip_def.h \
@@ -51,7 +51,7 @@ obj_srf06-cc26xx/uip-debug.o: /projects/contiki/core/net/ip/uip-debug.c \
  /projects/contiki/core/./net/ip/uip.h :
  /projects/contiki/core/./net/ip/uipopt.h :
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h :
- /projects/contiki/platform/srf06-cc26xx/srf06/cc26xx/board.h :
+ /projects/contiki/platform/srf06-cc26xx/launchpad/cc2650/board.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/ioc.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_types.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_chip_def.h :

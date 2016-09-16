@@ -1,9 +1,9 @@
-obj_srf06-cc26xx/als-sensor.o: \
- /projects/contiki/platform/srf06-cc26xx/srf06/als-sensor.c \
+obj_srf06-cc26xx/ext-flash.o: \
+ /projects/contiki/platform/srf06-cc26xx/common/ext-flash.c \
  /projects/contiki/core/./contiki.h \
  /projects/contiki/core/./contiki-version.h \
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h \
- /projects/contiki/platform/srf06-cc26xx/srf06/cc26xx/board.h \
+ /projects/contiki/platform/srf06-cc26xx/launchpad/cc2650/board.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/ioc.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_types.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_chip_def.h \
@@ -39,10 +39,7 @@ obj_srf06-cc26xx/als-sensor.o: \
  /projects/contiki/core/./sys/clock.h \
  /projects/contiki/core/./sys/energest.h \
  /projects/contiki/core/./sys/rtimer.h \
- /projects/contiki/core/./lib/sensors.h \
- /projects/contiki/platform/srf06-cc26xx/./srf06/als-sensor.h \
- /projects/contiki/cpu/cc26xx-cc13xx/./dev/adc-sensor.h \
- /projects/contiki/cpu/cc26xx-cc13xx/./dev/aux-ctrl.h \
+ /projects/contiki/platform/srf06-cc26xx/common/ext-flash.h \
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib.h \
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib-rom.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/aon_batmon.h \
@@ -95,12 +92,13 @@ obj_srf06-cc26xx/als-sensor.o: \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_trng.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/uart.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/watchdog.h \
- /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_wdt.h
- /projects/contiki/platform/srf06-cc26xx/srf06/als-sensor.c :
+ /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_wdt.h \
+ /projects/contiki/platform/srf06-cc26xx/common/board-spi.h
+ /projects/contiki/platform/srf06-cc26xx/common/ext-flash.c :
  /projects/contiki/core/./contiki.h :
  /projects/contiki/core/./contiki-version.h :
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h :
- /projects/contiki/platform/srf06-cc26xx/srf06/cc26xx/board.h :
+ /projects/contiki/platform/srf06-cc26xx/launchpad/cc2650/board.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/ioc.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_types.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_chip_def.h :
@@ -136,10 +134,7 @@ obj_srf06-cc26xx/als-sensor.o: \
  /projects/contiki/core/./sys/clock.h :
  /projects/contiki/core/./sys/energest.h :
  /projects/contiki/core/./sys/rtimer.h :
- /projects/contiki/core/./lib/sensors.h :
- /projects/contiki/platform/srf06-cc26xx/./srf06/als-sensor.h :
- /projects/contiki/cpu/cc26xx-cc13xx/./dev/adc-sensor.h :
- /projects/contiki/cpu/cc26xx-cc13xx/./dev/aux-ctrl.h :
+ /projects/contiki/platform/srf06-cc26xx/common/ext-flash.h :
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib.h :
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib-rom.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/aon_batmon.h :
@@ -193,3 +188,4 @@ obj_srf06-cc26xx/als-sensor.o: \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/uart.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/watchdog.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_wdt.h :
+ /projects/contiki/platform/srf06-cc26xx/common/board-spi.h :

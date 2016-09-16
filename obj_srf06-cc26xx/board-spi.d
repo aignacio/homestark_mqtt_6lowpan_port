@@ -1,5 +1,5 @@
-obj_srf06-cc26xx/aux-ctrl.o: \
- /projects/contiki/cpu/cc26xx-cc13xx/dev/aux-ctrl.c \
+obj_srf06-cc26xx/board-spi.o: \
+ /projects/contiki/platform/srf06-cc26xx/common/board-spi.c \
  /projects/contiki/core/./contiki.h \
  /projects/contiki/core/./contiki-version.h \
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h \
@@ -39,7 +39,6 @@ obj_srf06-cc26xx/aux-ctrl.o: \
  /projects/contiki/core/./sys/clock.h \
  /projects/contiki/core/./sys/energest.h \
  /projects/contiki/core/./sys/rtimer.h \
- /projects/contiki/cpu/cc26xx-cc13xx/./dev/aux-ctrl.h \
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib.h \
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib-rom.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/aon_batmon.h \
@@ -93,8 +92,8 @@ obj_srf06-cc26xx/aux-ctrl.o: \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/uart.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/watchdog.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_wdt.h \
- /projects/contiki/core/./lib/list.h
- /projects/contiki/cpu/cc26xx-cc13xx/dev/aux-ctrl.c :
+ /projects/contiki/platform/srf06-cc26xx/common/board-spi.h
+ /projects/contiki/platform/srf06-cc26xx/common/board-spi.c :
  /projects/contiki/core/./contiki.h :
  /projects/contiki/core/./contiki-version.h :
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h :
@@ -134,7 +133,6 @@ obj_srf06-cc26xx/aux-ctrl.o: \
  /projects/contiki/core/./sys/clock.h :
  /projects/contiki/core/./sys/energest.h :
  /projects/contiki/core/./sys/rtimer.h :
- /projects/contiki/cpu/cc26xx-cc13xx/./dev/aux-ctrl.h :
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib.h :
  /projects/contiki/cpu/cc26xx-cc13xx/./ti-lib-rom.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/aon_batmon.h :
@@ -188,4 +186,4 @@ obj_srf06-cc26xx/aux-ctrl.o: \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/uart.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/watchdog.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_wdt.h :
- /projects/contiki/core/./lib/list.h :
+ /projects/contiki/platform/srf06-cc26xx/common/board-spi.h :

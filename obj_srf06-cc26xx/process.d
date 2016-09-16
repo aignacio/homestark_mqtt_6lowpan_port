@@ -4,7 +4,7 @@ obj_srf06-cc26xx/process.o: /projects/contiki/core/sys/process.c \
  /projects/contiki/core/./sys/lc-switch.h \
  /projects/contiki/core/./sys/cc.h \
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h \
- /projects/contiki/platform/srf06-cc26xx/srf06/cc26xx/board.h \
+ /projects/contiki/platform/srf06-cc26xx/launchpad/cc2650/board.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/ioc.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_types.h \
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_chip_def.h \
@@ -26,7 +26,7 @@ obj_srf06-cc26xx/process.o: /projects/contiki/core/sys/process.c \
  /projects/contiki/core/./sys/lc-switch.h :
  /projects/contiki/core/./sys/cc.h :
  /projects/contiki/platform/srf06-cc26xx/./contiki-conf.h project-conf.h :
- /projects/contiki/platform/srf06-cc26xx/srf06/cc26xx/board.h :
+ /projects/contiki/platform/srf06-cc26xx/launchpad/cc2650/board.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/driverlib/ioc.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_types.h :
  /projects/contiki/cpu/cc26xx-cc13xx/lib/cc26xxware/inc/hw_chip_def.h :

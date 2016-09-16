@@ -150,7 +150,7 @@
 #define MQTT_SN_AUTO_RECONNECT                   /**< Define se o dispositivo deve se auto conectar de tempos em tempos */
 #define MQTT_SN_RETRY_PING        5              /**< Número de tentativas de envio de PING REQUEST antes de desconectar nó <-> broker */
 #define MQTT_SN_TIMEOUT_CONNECT   9*CLOCK_SECOND /**< Tempo base para comunicação MQTT-SN broker <-> nó */
-#define MQTT_SN_TIMEOUT           CLOCK_SECOND   /**< Tempo base para comunicação MQTT-SN broker <-> nó */
+#define MQTT_SN_TIMEOUT           3*CLOCK_SECOND   /**< Tempo base para comunicação MQTT-SN broker <-> nó */
 #define MQTT_SN_RETRY             5              /**< Número de tentativas de enviar qualquer pacote ao broker antes de desconectar */
 #define MAX_QUEUE_MQTT_SN         100            /**< Número máximo de tarefas a serem inseridas alocadas dinamicamente MQTT-SN */
 #define MAX_TOPIC_USED            100            /**< Número máximo de tópicos que o usuário pode registrar, a API cria um conjunto de estruturas para o bind de topic e short topic id */

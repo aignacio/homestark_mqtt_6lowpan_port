@@ -23,6 +23,8 @@
  * @date 19 Ago 2016
  * @brief Arquivo principal do código fonte do porte do MQTT-SN para o Contiki
  * @see http://www.aignacio.com
+ * @todo Passar para a função de recepção de publicações de callback um ponteiro
+         para o dado e o comprimento ao invés de usar um for
 
  [Apontamento n-1]:
  Descoberta uma característica do contiki, o que ocorre é que se você utiliza

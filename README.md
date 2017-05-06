@@ -1,4 +1,5 @@
-#Porte do MQTT-SN para o Contiki-OS
+# Porte do MQTT-SN para o Contiki-OS </br>
+![logo mqtt](http://mqtt.org/new/wp-content/uploads/2011/08/mqttorg-glow.png)
 ![logo do projeto](doxy_files/logo_symbol.png)</br>
 __Desenvolvedor:__ Ânderson Ignácio da Silva </br>
 Portado parcialmente as características oficiais do protocolo, alguns limitantes
